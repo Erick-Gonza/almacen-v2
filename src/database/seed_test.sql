@@ -1,3 +1,5 @@
+-- Usar la base de datos
+USE inventory_management;
 -- Insertar datos de prueba en la tabla product_categories
 INSERT INTO product_categories (name) VALUES
 ('Electrónicos'),
