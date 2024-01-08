@@ -1,7 +1,7 @@
 -- Usar la base de datos
 USE inventory_management;
 -- Insertar datos de prueba en la tabla product_categories
-INSERT INTO product_categories (name) VALUES
+INSERT INTO product_categories_amc (name) VALUES
 ('Electrónicos'),
 ('Ropa'),
 ('Hogar'),
@@ -14,7 +14,7 @@ INSERT INTO product_categories (name) VALUES
 ('Muebles');
 
 -- Insertar datos de prueba en la tabla products
-INSERT INTO products (name, description, price, stock, id_category) VALUES
+INSERT INTO products_amc (name, description, price, stock, id_category) VALUES
 ('Teléfono inteligente', 'Pantalla HD, cámara de alta resolución', 499.99, 100, 1),
 ('Camiseta', 'Talla L, color azul', 19.99, 200, 2),
 ('Aspiradora', 'Modelo de alta potencia para uso doméstico', 149.99, 50, 3),
@@ -27,7 +27,7 @@ INSERT INTO products (name, description, price, stock, id_category) VALUES
 ('Sofá', 'Sofá de tres plazas, color beige', 499.99, 20, 10);
 
 -- Insertar datos de prueba en la tabla customers
-INSERT INTO customers (name, email, phone) VALUES
+INSERT INTO customers_amc (name, email, phone) VALUES
 ('Juan Pérez', 'juan@example.com', '555-1234'),
 ('María García', 'maria@example.com', '555-5678'),
 ('Carlos López', 'carlos@example.com', '555-9012'),
@@ -40,7 +40,7 @@ INSERT INTO customers (name, email, phone) VALUES
 ('Isabel Gómez', 'isabel@example.com', '555-9012');
 
 -- Insertar datos de prueba en la tabla customer_addresses
-INSERT INTO customer_addresses (id_customer, address, city, postal_code) VALUES
+INSERT INTO customer_addresses_amc (id_customer, address, city, postal_code) VALUES
 (1, 'Calle A, 123', 'Ciudad', '12345'),
 (2, 'Avenida B, 456', 'Pueblo', '67890'),
 (3, 'Calle C, 789', 'Villa', '23456'),
@@ -53,7 +53,7 @@ INSERT INTO customer_addresses (id_customer, address, city, postal_code) VALUES
 (10, 'Avenida J, 890', 'Ciudad', '01234');
 
 -- Insertar datos de prueba en la tabla suppliers
-INSERT INTO suppliers (name, address, phone) VALUES
+INSERT INTO suppliers_amc (name, address, phone) VALUES
 ('Proveedor A', 'Calle X, 123', '555-1111'),
 ('Proveedor B', 'Avenida Y, 456', '555-2222'),
 ('Proveedor C', 'Calle Z, 789', '555-3333'),
@@ -66,7 +66,7 @@ INSERT INTO suppliers (name, address, phone) VALUES
 ('Proveedor J', 'Avenida Q, 890', '555-0000');
 
 -- Insertar datos de prueba en la tabla orders
-INSERT INTO orders (id_customer, return_status) VALUES
+INSERT INTO orders_amc (id_customer, return_status) VALUES
 (1, 'complete'),
 (2, 'pending'),
 (3, 'processing'),
@@ -79,7 +79,7 @@ INSERT INTO orders (id_customer, return_status) VALUES
 (10, 'complete');
 
 -- Insertar datos de prueba en la tabla order_details
-INSERT INTO order_details (id_order, id_product, quantity) VALUES
+INSERT INTO order_details_amc (id_order, id_product, quantity) VALUES
 (1, 1, 2),
 (2, 3, 1),
 (3, 5, 3),
@@ -92,7 +92,7 @@ INSERT INTO order_details (id_order, id_product, quantity) VALUES
 (10, 10, 2);
 
 -- Insertar datos de prueba en la tabla supplier_product
-INSERT INTO supplier_product (id_supplier, id_product) VALUES
+INSERT INTO supplier_product_amc (id_supplier, id_product) VALUES
 (1, 1),
 (2, 2),
 (3, 3),

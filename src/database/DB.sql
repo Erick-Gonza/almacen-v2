@@ -8,13 +8,13 @@ CREATE DATABASE inventory_management;
 USE inventory_management;
 
 -- Crear tabla de categorías de productos
-CREATE TABLE IF NOT EXISTS product_categories (
+CREATE TABLE IF NOT EXISTS product_categories_amc (
     id_category INT PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(100) NOT NULL
 );
 
 -- Crear tabla de productos
-CREATE TABLE IF NOT EXISTS products (
+CREATE TABLE IF NOT EXISTS products_amc (
     id_product INT PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(100) NOT NULL,
     description TEXT,
@@ -26,7 +26,7 @@ CREATE TABLE IF NOT EXISTS products (
 );
 
 -- Crear tabla de clientes
-CREATE TABLE IF NOT EXISTS customers (
+CREATE TABLE IF NOT EXISTS customers_amc (
     id_customer INT PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(100) NOT NULL,
     email VARCHAR(100),
@@ -36,7 +36,7 @@ CREATE TABLE IF NOT EXISTS customers (
 );
 
 -- Crear tabla de dirección de envío de los clientes
-CREATE TABLE IF NOT EXISTS customer_addresses (
+CREATE TABLE IF NOT EXISTS customer_addresses_amc (
     id_address INT PRIMARY KEY AUTO_INCREMENT,
     id_customer INT,
     address VARCHAR(255) NOT NULL,
@@ -46,7 +46,7 @@ CREATE TABLE IF NOT EXISTS customer_addresses (
 );
 
 -- Crear tabla de proveedores
-CREATE TABLE IF NOT EXISTS suppliers (
+CREATE TABLE IF NOT EXISTS suppliers_amc (
     id_supplier INT PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(100) NOT NULL,
     address VARCHAR(255),
@@ -54,7 +54,7 @@ CREATE TABLE IF NOT EXISTS suppliers (
 );
 
 -- Crear tabla de órdenes
-CREATE TABLE IF NOT EXISTS orders (
+CREATE TABLE IF NOT EXISTS orders_amc (
     id_order INT PRIMARY KEY AUTO_INCREMENT,
     id_customer INT,
     date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
@@ -64,7 +64,7 @@ CREATE TABLE IF NOT EXISTS orders (
 );
 
 -- Crear tabla de detalles de órdenes
-CREATE TABLE IF NOT EXISTS order_details (
+CREATE TABLE IF NOT EXISTS order_details_amc (
     id_order_detail INT PRIMARY KEY AUTO_INCREMENT,
     id_order INT,
     id_product INT,
@@ -77,7 +77,7 @@ CREATE TABLE IF NOT EXISTS order_details (
 );
 
 -- Crear tabla de detalles de proveedores y productos
-CREATE TABLE IF NOT EXISTS supplier_product (
+CREATE TABLE IF NOT EXISTS supplier_product_amc (
     id_supplier_product INT PRIMARY KEY AUTO_INCREMENT,
     id_supplier INT,
     id_product INT,
@@ -88,7 +88,7 @@ CREATE TABLE IF NOT EXISTS supplier_product (
 );
 
 -- Crear tabla de movimientos de productos
-CREATE TABLE IF NOT EXISTS product_movements (
+CREATE TABLE IF NOT EXISTS product_movements_amc (
     id_movement INT PRIMARY KEY AUTO_INCREMENT,
     id_product INT,
     movement_type ENUM('entrada', 'salida') NOT NULL,
